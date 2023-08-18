@@ -24,7 +24,7 @@ app.post('/send-email',(req,res)=>{
     const mailOptions = {
         from: email,
         to: process.env.EMAIL,
-        subject: 'Nuevo mensaje de cleinte de mi web site',
+        subject: 'Nuevo mensaje de cliente de mi web site',
         html: `<p>Nombre: ${name}</p>
            <p>Email: ${email}</p>
            <p>Dirección: ${address}</p>
