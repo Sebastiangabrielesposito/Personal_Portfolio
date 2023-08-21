@@ -3,12 +3,6 @@ const contactForm = document.getElementById('contact-form')
 contactForm.addEventListener('submit',async (e) =>{
     e.preventDefault()
 
-    
-
-    
-
-     
-
     const data = {
         name: document.querySelector('input[name="name"]').value,
         email: document.querySelector('input[name="email"]').value,
@@ -17,8 +11,10 @@ contactForm.addEventListener('submit',async (e) =>{
         message: document.querySelector('textarea[name="message"]').value
     };
 
+    const serverUrl = 'https://portfolio-personal-indol-omega.vercel.app';
+
     try {
-        const response = await fetch('http://localhost:3000/send-email', {
+        const response = await fetch(`${serverUrl}/send-email`, {
             method:'POST',
             body: JSON.stringify(data),
             headers: {

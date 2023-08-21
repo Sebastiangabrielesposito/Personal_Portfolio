@@ -15,7 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(__dirname + "/public"));
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT // || 9000 (En localHost)
+
 
 app.post('/send-email',(req,res)=>{
     const {name, email, address, number, message} = req.body
