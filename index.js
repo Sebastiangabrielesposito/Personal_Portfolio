@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import { transporter } from './nodemailer.js'
+import { transporter } from './server/nodemailer.js'
 import cors from 'cors'
 
 const app = express()
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(__dirname + "/public"));
 
 const PORT = process.env.PORT // || 9000 (En localHost)
-
+// const PORT = 9000
 
 app.post('/send-email',(req,res)=>{
     const {name, email, address, number, message} = req.body

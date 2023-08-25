@@ -12,6 +12,7 @@ contactForm.addEventListener('submit',async (e) =>{
     };
 
     const serverUrl = 'https://portfolio-personal-indol-omega.vercel.app';
+    // const serverUrl = 'http://localhost:9000'
 
     try {
         const response = await fetch(`${serverUrl}/send-email`, {
